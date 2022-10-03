@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { FaBars, FaTimes, FaGithub, FaLinkedin, FaFacebook, FaGit } from 'react-icons/fa'
+import { FaBars, FaTimes, FaGithub, FaLinkedin,  } from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
 import Logo from '../assets/logo.png'
@@ -12,7 +12,7 @@ const Navbar = () => {
     return (
         <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300">
             <div>
-                <img src={Logo} alt="logo Image" style={{ width: '50px' }} />
+                <img src={Logo} alt="logo" style={{ width: '50px' }} />
             </div>
             {/* menu */}
 
@@ -39,7 +39,7 @@ const Navbar = () => {
                 <li className='py-6 text-4xl'>Contact</li>
             </ul>
             {/* social icons */}
-            <div className='flex fixed flex-col top-[35%] left-0'>
+            <div className='hidden flex fixed flex-col top-[35%] left-0'>
                 <ul>
                     <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600'>
                         <a className='flex justify-between items-center w-full text-gray-300' href="/">
