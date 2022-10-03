@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
-import { FaBars, FaTimes, FaGithub, FaLinkedin,  } from 'react-icons/fa'
+import { FaBars, FaTimes, FaGithub, FaLinkedin, } from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
-import Logo from '../assets/logo.png'
+import tj from '../assets/Tj.png'
+import { Link } from 'react-scroll'
 
 
 
@@ -12,16 +13,35 @@ const Navbar = () => {
     return (
         <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300">
             <div>
-                <img src={Logo} alt="logo" style={{ width: '50px' }} />
+                <img src={tj} alt="logo" style={{ width: '50px' }} />
             </div>
             {/* menu */}
 
-            <ul className=' hidden md:flex'>
-                <li>Home</li>
-                <li>About</li>
-                <li>Skills</li>
-                <li>Work</li>
-                <li>Contact</li>
+            <ul className='hidden md:flex'>
+                <li>
+                    <Link to="home" smooth={true} duration={500} >
+                        Home
+                    </Link>
+                </li>
+                <li>
+                    <Link to="about" smooth={true} duration={500} >
+                        About
+                    </Link>
+                </li>
+                <li>
+                    <Link to="skills" smooth={true} duration={500} >
+                        Skills
+                    </Link>
+                </li>
+                <li>
+                    <Link to="work" smooth={true} duration={500} >
+                        Work
+                    </Link>
+                </li>
+                <li><Link to="contact" smooth={true} duration={500} >
+                    Contact
+                </Link>
+                </li>
             </ul>
 
 
@@ -32,11 +52,31 @@ const Navbar = () => {
             </div>
             {/* Mobile Menu */}
             <ul className={!show ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-[#0a192f] text-gray-300 flex flex-col justify-center items-center'}>
-                <li className='py-6 text-4xl'>Home</li>
-                <li className='py-6 text-4xl'>About</li>
-                <li className='py-6 text-4xl'>Skills</li>
-                <li className='py-6 text-4xl'>Work</li>
-                <li className='py-6 text-4xl'>Contact</li>
+                <li className='py-6 text-4xl'>
+                    <Link onClick={handleClick} to="home" smooth={true} duration={500} >
+                        Home
+                    </Link>
+                </li>
+                <li className='py-6 text-4xl'>
+                    <Link onClick={handleClick} to="about" smooth={true} duration={500} >
+                        About
+                    </Link>
+                </li>
+                <li className='py-6 text-4xl'>
+                    <Link onClick={handleClick} to="skills" smooth={true} duration={500} >
+                        Skills
+                    </Link>
+                </li>
+                <li className='py-6 text-4xl'>
+                    <Link onClick={handleClick} to="work" smooth={true} duration={500} >
+                        Work
+                    </Link>
+                </li>
+                <li className='py-6 text-4xl'>
+                    <Link onClick={handleClick} to="contact" smooth={true} duration={500} >
+                        Contact
+                    </Link>
+                </li>
             </ul>
             {/* social icons */}
             <div className='hidden lg:flex fixed flex-col top-[35%] left-0'>
